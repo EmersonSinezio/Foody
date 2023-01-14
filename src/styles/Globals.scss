@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&family=Rubik+Vinyl&display=swap");
+$colorTitle: #ccc;
+$colorBorder: #fffc00;
+$colorBackground: #d9d9d9;
+$colorBackground2: #00cc00;
+$headerColor: #ffff89;
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $colorTitle;
+}
