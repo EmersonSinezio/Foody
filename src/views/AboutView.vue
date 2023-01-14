@@ -7,7 +7,7 @@
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
         />
       </a>
-      <a href="https://www.linkedin.com/in/emerson-mesquita-317a81258/">
+      <a href="https://www.linkedin.com/in/emerson-sineziio/">
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original-wordmark.svg"
         />
