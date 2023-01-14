@@ -110,6 +110,23 @@
   align-items: center;
   color: #ccc;
 }
+@media (max-width: 600px) {
+  .imageMaster {
+    width: 80vw;
+    height: 40vh;
+    margin: 10vh 0 5vh 10vw;
+  }
+  .imagesPreview img {
+    width: 25vw;
+    height: 20vh;
+  }
+  .desc p {
+    font-size: 0.8rem;
+  }
+  .desc span {
+    font-size: 0.6rem;
+  }
+}
 </style>
 <script>
 export default {

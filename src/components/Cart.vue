@@ -41,9 +41,9 @@
   position: absolute;
   right: 0;
   top: 0;
-  height: 80vh;
-  width: 20vw;
-  margin-top: 15vh;
+  height: 60vh;
+  width: 40vw;
+  margin: 10vh 4vw;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 0.5rem;
@@ -59,7 +59,7 @@
   text-transform: uppercase;
 }
 .products span {
-  margin: 2vh 1vw;
+  margin: 2vh 0.5vw;
   background-color: #00cc00;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -108,7 +108,7 @@
   background-color: #cc0000;
 }
 .products div button {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   background-color: #cc0000;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -121,6 +121,11 @@
   top: 0;
   right: 0;
   margin-right: 50%;
+}
+@media (max-width: 600px) {
+  .cart {
+    width: 70vw;
+  }
 }
 </style>
 <script>

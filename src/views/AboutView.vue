@@ -39,11 +39,20 @@
 .about div img {
   background-color: #00cc00;
   margin: 0 5vw;
-
   padding: 1rem 1.2rem;
   border-radius: 0.5rem;
   color: #ccc;
   width: 20vw;
   height: 20vh;
+}
+@media (max-width: 600px) {
+  .about h1 {
+    width: 80vw;
+    font-size: 1.5rem;
+  }
+  .about div img {
+    width: 100px;
+    height: 100px;
+  }
 }
 </style>
