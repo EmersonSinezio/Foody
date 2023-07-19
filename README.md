@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-Projeto Foody
-=======
+# Projeto Foody
+
 ![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
 
 ## Projeto Foody
@@ -8,21 +7,14 @@ Projeto Foody
 Esse é um projeto baseado em um site de comida
 
 =======
-<<<<<<< Updated upstream
+
 # Vue 3 + Vite
+
 =======
-<<<<<<< HEAD
 ![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
->>>>>>> Stashed changes
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-<<<<<<< Updated upstream
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 =======
->>>>>>> origin/main
+
 ## Links
 
 - Site hospedado na Vercel: https://food-website-pearl-two.vercel.app/
@@ -33,10 +25,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 As tecs utilizadas para realizar o projeto:
 
-- React
-- React-Icons
-- React-Router
-- Sass
+- Vue
+- Vue-Router
 
 ## Serviços usados:
 
@@ -47,17 +37,11 @@ As tecs utilizadas para realizar o projeto:
 
 ### 1 - Quando abrir o app será recebido com a Home page
 
-![Homepage image](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/Homepage.png)
+![Homepage image](https://github.com/EmersonSinezio/Foody/tree/main/Readme/Foody_home.png)
 
-### 2 - Após clicar nos produtos aparecerá um carrinho de compras ao lado
+### 2 - O projeto contem uma tela sobre
 
-#### Ao escolher entre comprar ou cancelar o carrinho vai se esvaziar
-
-![Cart](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/Cart.png)
-
-### 3 - O projeto contem uma tela sobre
-
-![AboutPage](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/About.png)
+![About](https://github.com/EmersonSinezio/Foody/tree/main/Readme/Foody_about.png)
 
 ## Ideia do projeto
 
@@ -69,16 +53,3 @@ A principal ideia do projeto é:
 ## Autor
 
 - **Emerson Mesquita Sinézio**
-<<<<<<< HEAD
-=======
-=======
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
->>>>>>> 140566f (#Remake)
->>>>>>> Stashed changes
->>>>>>> origin/main
