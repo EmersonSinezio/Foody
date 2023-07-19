@@ -8,8 +8,6 @@ Esse é um projeto baseado em um site de comida
 
 =======
 
-# Vue 3 + Vite
-
 =======
 ![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
 
@@ -37,11 +35,11 @@ As tecs utilizadas para realizar o projeto:
 
 ### 1 - Quando abrir o app será recebido com a Home page
 
-![Homepage image](https://github.com/EmersonSinezio/Foody/tree/main/Readme/Foody_home.png)
+![Homepage image](https://github.com/EmersonSinezio/Foody/blob/main/Readme/Foody_home.png)
 
 ### 2 - O projeto contem uma tela sobre
 
-![About](https://github.com/EmersonSinezio/Foody/tree/main/Readme/Foody_about.png)
+![About](https://github.com/EmersonSinezio/Foody/blob/main/Readme/Foody_about.png)
 
 ## Ideia do projeto
 
