@@ -6,12 +6,7 @@
 
 Esse é um projeto baseado em um site de comida
 
-=======
-
-=======
 ![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
-
-=======
 
 ## Links
 
