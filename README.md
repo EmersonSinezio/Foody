@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Projeto Foody
 =======
 ![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
@@ -6,6 +7,22 @@ Projeto Foody
 
 Esse é um projeto baseado em um site de comida
 
+=======
+<<<<<<< Updated upstream
+# Vue 3 + Vite
+=======
+<<<<<<< HEAD
+![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
+>>>>>>> Stashed changes
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+## Recommended IDE Setup
+
+<<<<<<< Updated upstream
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+=======
+>>>>>>> origin/main
 ## Links
 
 - Site hospedado na Vercel: https://food-website-pearl-two.vercel.app/
@@ -52,3 +69,16 @@ A principal ideia do projeto é:
 ## Autor
 
 - **Emerson Mesquita Sinézio**
+<<<<<<< HEAD
+=======
+=======
+# Vue 3 + Vite
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+## Recommended IDE Setup
+
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+>>>>>>> 140566f (#Remake)
+>>>>>>> Stashed changes
+>>>>>>> origin/main
