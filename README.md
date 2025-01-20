@@ -1,44 +1,50 @@
-## Projeto Foody
+# React + TypeScript + Vite
 
-Esse é um projeto baseado em um site de comida
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Logo](https://github.com/EmersonSinezio/foodWebsite/blob/main/public/Readme/FoodyLogo.png)
+Currently, two official plugins are available:
 
-## Links
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Site hospedado na Vercel: https://food-website-pearl-two.vercel.app/
-- Repositório: https://github.com/EmersonSinezio/food-website
-  - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
+## Expanding the ESLint configuration
 
-## Tecs
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-As tecs utilizadas para realizar o projeto:
+- Configure the top-level `parserOptions` property like this:
 
-- Vue
-- Vue-Router
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## Serviços usados:
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-- Github
-- Vercel
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-## Inicialização
-
-### 1 - Quando abrir o app será recebido com a Home page
-
-![Homepage image](https://github.com/EmersonSinezio/Foody/blob/main/Readme/Foody_home.png)
-
-### 2 - O projeto contem uma tela sobre
-
-![About](https://github.com/EmersonSinezio/Foody/blob/main/Readme/Foody_about.png)
-
-## Ideia do projeto
-
-A principal ideia do projeto é:
-
-- Escolher um produto de sua escolha
-- Comprar o item escolhido
-
-## Autor
-
-- **Emerson Mesquita Sinézio**
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
