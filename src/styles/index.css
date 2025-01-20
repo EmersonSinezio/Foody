@@ -6,3 +6,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.size-5 {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animate-star {
+  transform: scale(1.2);
+  /* Aumenta o tamanho da estrela ativa */
+}
