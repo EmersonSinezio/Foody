@@ -1,13 +1,11 @@
-const Cart = () => {
+import React from "react";
+import products from "../data/products";
+// TODO:implementações: Fazer a lógica do carrinho usando o useContext para armazenar os produtos no carrinho e o total da compra e mostrar quantidade em numero no header
+const Cart: React.FC = () => {
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "90vh",
-      }}
-    >
-      <section className="w-2/6 h-full m-auto">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <div className=" flex items-center justify-center bg-slate-50">
+      <section className="w-2/6 m-auto">
+        <div className="mx-auto max-w-screen-xl h-[80vh] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <header className="text-center">
               <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">
@@ -15,27 +13,29 @@ const Cart = () => {
               </h1>
             </header>
 
-            <div className="mt-8">
+            <div className="mt-4">
               <ul className="space-y-4">
                 <li className="flex items-center gap-4">
                   <img
-                    src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                    src={products[0].imgSrc}
                     alt=""
-                    className="size-16 rounded object-cover"
+                    className="size-16 rounded object-cover h-full"
                   />
 
                   <div>
-                    <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+                    <h3 className="text-sm text-gray-900">
+                      {products[0].name}
+                    </h3>
 
                     <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                       <div>
-                        <dt className="inline">Size:</dt>
-                        <dd className="inline">XXS</dd>
+                        <dt className="inline">Price: </dt>
+                        <dd className="inline">{products[0].price}</dd>
                       </div>
 
                       <div>
-                        <dt className="inline">Color:</dt>
-                        <dd className="inline">White</dd>
+                        <dt className="inline">Quantity: </dt>
+                        <dd className="inline">1</dd>
                       </div>
                     </dl>
                   </div>
@@ -79,23 +79,25 @@ const Cart = () => {
 
                 <li className="flex items-center gap-4">
                   <img
-                    src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                    src={products[1].imgSrc}
                     alt=""
-                    className="size-16 rounded object-cover"
+                    className="size-16 rounded object-cover h-full"
                   />
 
                   <div>
-                    <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+                    <h3 className="text-sm text-gray-900">
+                      {products[1].name}
+                    </h3>
 
                     <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                       <div>
-                        <dt className="inline">Size:</dt>
-                        <dd className="inline">XXS</dd>
+                        <dt className="inline">Price: </dt>
+                        <dd className="inline">{products[1].price}</dd>
                       </div>
 
                       <div>
-                        <dt className="inline">Color:</dt>
-                        <dd className="inline">White</dd>
+                        <dt className="inline">Quantity: </dt>
+                        <dd className="inline">1</dd>
                       </div>
                     </dl>
                   </div>
@@ -139,23 +141,25 @@ const Cart = () => {
 
                 <li className="flex items-center gap-4">
                   <img
-                    src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                    src={products[2].imgSrc}
                     alt=""
-                    className="size-16 rounded object-cover"
+                    className="size-16 rounded object-cover h-full"
                   />
 
                   <div>
-                    <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+                    <h3 className="text-sm text-gray-900">
+                      {products[2].name}
+                    </h3>
 
                     <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                       <div>
-                        <dt className="inline">Size:</dt>
-                        <dd className="inline">XXS</dd>
+                        <dt className="inline">Price: </dt>
+                        <dd className="inline">{products[2].price}</dd>
                       </div>
 
                       <div>
-                        <dt className="inline">Color:</dt>
-                        <dd className="inline">White</dd>
+                        <dt className="inline">Quantity: </dt>
+                        <dd className="inline">1</dd>
                       </div>
                     </dl>
                   </div>

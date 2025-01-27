@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
                 <li>
                   <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    to="/"
+                    to="/reservation"
                   >
                     Reservas
                   </Link>
@@ -39,9 +39,9 @@ const Navigation: React.FC = () => {
                 <li>
                   <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    to="/"
+                    to="/contact"
                   >
-                    Serviços
+                    Contato
                   </Link>
                 </li>
 

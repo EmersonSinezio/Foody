@@ -35,14 +35,13 @@ const Testimonials: React.FC = () => {
           <div className="md:flex md:items-end md:justify-between">
             <div className="max-w-full ml-8">
               <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Read trusted reviews from our customers
+                Avaliações de quem já experimentou
               </h2>
 
               <p className="mt-6 max-w-lg leading-relaxed text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur praesentium natus sapiente commodi. Aliquid sunt
-                tempore iste repellendus explicabo dignissimos placeat, autem
-                harum dolore reprehenderit quis! Quo totam dignissimos earum.
+                Descubra o que nossos clientes têm a dizer sobre as delícias do
+                nosso cardápio. Cada prato é preparado com cuidado e paixão para
+                oferecer uma experiência gastronômica única e inesquecível.
               </p>
             </div>
 
@@ -50,7 +49,7 @@ const Testimonials: React.FC = () => {
               href="#"
               className="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full border border-yellow-600 px-5 py-3 text-yellow-600 transition hover:bg-yellow-600 hover:text-white md:mt-0"
             >
-              <span className="font-medium"> Read all reviews </span>
+              <span className="font-medium"> Ler todas as avaliações </span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,84 +70,79 @@ const Testimonials: React.FC = () => {
 
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
-              {/* TODO: ARRUMAR OS ICONES DE STAR E CRIAR UMA ANIMAÇÃO PARA ELAS */}
               <div>
                 {/* Icones de estrelas */}
                 <div className="flex gap-0.5 text-green-500" id="rating">
-                  {stars.map((star, index) => (
+                  {stars.map((__, index) => (
                     <SvgIcon key={index} isActive={index === activeStar} />
                   ))}
                 </div>
                 <div className="mt-4">
                   <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
-                    Stayin' Alive
+                    Comida maravilhosa!
                   </p>
 
                   <p className="mt-4 leading-relaxed text-gray-700">
-                    No, Rose, they are not breathing. And they have no arms or
-                    legs … Where are they? You know what? If we come across
-                    somebody with no arms or legs, do we bother resuscitating
-                    them? I mean, what quality of life do we have there?
+                    Experiência incrível! Os pratos estavam deliciosos e a
+                    apresentação foi impecável. O atendimento foi atencioso e
+                    certamente voltarei em breve!
                   </p>
                 </div>
               </div>
 
               <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                &mdash; Michael Scott
+                &mdash; Ana Clara
               </footer>
             </blockquote>
 
             <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
               <div>
                 <div className="flex gap-0.5 text-green-500" id="rating">
-                  {stars.map((star, index) => (
+                  {stars.map((__, index) => (
                     <SvgIcon key={index} isActive={index === activeStar} />
                   ))}
                 </div>
 
                 <div className="mt-4">
                   <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
-                    Stayin' Alive
+                    Melhor restaurante da região!
                   </p>
 
                   <p className="mt-4 leading-relaxed text-gray-700">
-                    No, Rose, they are not breathing. And they have no arms or
-                    legs … Where are they? You know what? If we come across
-                    somebody with no arms or legs, do we bother resuscitating
-                    them? I mean, what quality of life do we have there?
+                    A variedade no cardápio é incrível e cada prato tem um sabor
+                    único. Ótima experiência gastronômica, recomendo a todos!
                   </p>
                 </div>
               </div>
 
               <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                &mdash; Michael Scott
+                &mdash; Lucas Mendes
               </footer>
             </blockquote>
 
             <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
               <div>
                 <div className="flex gap-0.5 text-green-500" id="rating">
-                  {stars.map((star, index) => (
+                  {stars.map((__, index) => (
                     <SvgIcon key={index} isActive={index === activeStar} />
                   ))}
                 </div>
 
                 <div className="mt-4">
                   <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
-                    Stayin' Alive
+                    Ambiente acolhedor e comida deliciosa!
                   </p>
 
                   <p className="mt-4 leading-relaxed text-gray-700">
-                    No, Rose, they are not breathing. And they have no arms or
-                    legs … Where are they? You know what? If we come across
-                    somebody with no arms or legs, do we bother resuscitating
-                    them? I mean, what quality of life do we have there?
+                    O ambiente é super aconchegante e os pratos são incríveis.
+                    Fiquei impressionada com a qualidade e o sabor. Com certeza
+                    um lugar para retornar muitas vezes!
                   </p>
                 </div>
               </div>
 
               <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                &mdash; Michael Scott
+                &mdash; Camila Oliveira
               </footer>
             </blockquote>
           </div>

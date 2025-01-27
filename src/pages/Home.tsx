@@ -14,9 +14,9 @@ const Home = () => {
           comida <span className="text-yellow-600">favorita</span>
         </h1>
         <p className="w-2/3 my-6 text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla alias
-          sunt aliquid minima ea quia repellat voluptates, laborum earum
-          explicabo?
+          Descubra uma experiência gastronômica única com pratos preparados com
+          ingredientes frescos e muito sabor. Aqui, você encontra opções que
+          agradam a todos os paladares, do tradicional ao inovador.
         </p>
         <div className="w-1/2 flex justify-around align-middle">
           <Link
