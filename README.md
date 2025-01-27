@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Aplicativo de Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./public/assets/Foody_homepage.png">
 
-Currently, two official plugins are available:
+### Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é um projeto de aplicativo para um restaurante fictício. O objetivo é simular a experiência de gerenciar e interagir com um restaurante, oferecendo funcionalidades como:
 
-## Expanding the ESLint configuration
+- Visualização de cardápios
+- Gestão de pedidos e promoções
+- Além de um sistema de reservas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Atualmente, o aplicativo está quase completo, faltando apenas algumas funcionalidades que serão implementadas em breve.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Front-end: React, Typescript, Tailwind CSS para estilização responsiva e atraente.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Ferramentas de Design: SVGs para ícones e layout moderno baseado em componentes reutilizáveis.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Funcionalidades
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Cardápio: Apresentação de pratos e bebidas com descrições e preços.
+
+- Pedidos: Sistema para adicionar itens ao carrinho e realizar pedidos.
+
+- Reservas: Possibilidade de reservar mesas diretamente pelo aplicativo.
+
+- Contato: Uma seção interativa para informações de contato, incluindo e-mail, localização e telefone.
+
+## Funcionalidades Futuras
+
+- O uso do usecontext para gerenciar o carrinho de forma global e mais efetiva
+- O uso do usecontext para gerenciar o tema de light e dark
+- Usar api para conectar ao Whatsapp para finalização de pedido
+- Arrumar a responsividade para mobiles
