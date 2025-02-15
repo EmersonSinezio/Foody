@@ -30,7 +30,4 @@ Ferramentas de Design: SVGs para ícones e layout moderno baseado em componentes
 
 ## Funcionalidades Futuras
 
-- O uso do usecontext para gerenciar o carrinho de forma global e mais efetiva
-- O uso do usecontext para gerenciar o tema de light e dark
-- Usar api para conectar ao Whatsapp para finalização de pedido
-- Arrumar a responsividade para mobiles
+- Responsividade para telas menores

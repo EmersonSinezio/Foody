@@ -33,23 +33,23 @@ const Reserves: React.FC = () => {
   }
 
   return (
-    <div className="w-2/3 h-[80%] mt-8 flex items-center justify-center">
+    <div className="w-2/3 h-[80%] flex items-center justify-center">
       <div className="grid grid-cols-3 gap-4">
         {Array.from({ length: 9 }).map((_, i) => (
           <div
             key={i}
             className="w-56 h-40 border-2 border-gray-400 rounded-lg flex items-center justify-center flex-col"
           >
-            <h1 className="text-2xl my-4">
-              M-<span className="text-yellow-600">{i + 1}</span>
+            <h1 className="text-2xl my-4 dark:text-white">
+              Mesa - <span className="text-yellow-600">{i + 1}</span>
             </h1>
-            <span className="text-bold text-sm">
+            <span className="text-bold text-sm  dark:text-white">
               Mesa para {mesaPessoas[i]} pessoas
             </span>
             <button
               className="text-sm px-4 py-1 my-4 rounded-lg bg-yellow-300 hover:bg-yellow-200 ease-in duration-300"
               onClick={(e) => {
-                activate(e.currentTarget.parentElement, e.currentTarget);
+                activate(e.currentTarget.parentElement!, e.currentTarget);
               }}
             >
               Reservar

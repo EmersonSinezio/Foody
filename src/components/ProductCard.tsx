@@ -1,10 +1,22 @@
 import React from "react";
 import Cards from "./Cards";
+import { useState } from "react";
+import products from "../data/products";
 const ProductCard: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Função para filtrar os produtos
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(); // Previne o recarregamento da página
+  };
   return (
-    <div className="h-[100vh] mt-[20vh]">
+    <div className="h-[100vh] w-full dark:bg-gray-900">
       {/* Barra de pesquisa */}
-      <form className="max-w-md mx-auto">
+      <form onSubmit={handleSearch} className="max-w-md mx-auto  mt-[4vh]">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -32,8 +44,10 @@ const ProductCard: React.FC = () => {
           <input
             type="search"
             id="default-search"
-            className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-700 rounded-lg bg-transparent"
+            className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-700 rounded-lg bg-transparent dark:text-white"
             placeholder="Pesquisar sua comida favorita"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             required
           />
           <button
@@ -46,10 +60,8 @@ const ProductCard: React.FC = () => {
       </form>
       {/* Produtos */}
       <div>
-        <h1 className="text-2xl font-bold mt-5 mx-2">Principais produtos</h1>
-        <Cards />
-        <h1 className="text-2xl font-bold mt-5 mx-2">Mais vendidos</h1>
-        <Cards />
+        <h1 className="text-2xl font-bold my-8 mx-2 dark:text-white text-center">Principais produtos</h1>
+        <Cards products={filteredProducts}/>
       </div>
     </div>
   );

@@ -29,8 +29,8 @@ const Testimonials: React.FC = () => {
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar
   }, [stars.length]);
   return (
-    <div>
-      <section className="bg-gray-50">
+    <div className="dark:bg-gray-900 w-full h-[90vh] flex items-center justify-center">
+      <section className="bg-gray-50 dark:bg-gray-600">
         <div className="mx-auto sm:px-6 lg:px-8 lg:py-8">
           <div className="md:flex md:items-end md:justify-between">
             <div className="max-w-full ml-8">
@@ -68,8 +68,8 @@ const Testimonials: React.FC = () => {
             </a>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 ">
+            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8 rounded-lg">
               <div>
                 {/* Icones de estrelas */}
                 <div className="flex gap-0.5 text-green-500" id="rating">
@@ -95,7 +95,7 @@ const Testimonials: React.FC = () => {
               </footer>
             </blockquote>
 
-            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
+            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8 rounded-lg">
               <div>
                 <div className="flex gap-0.5 text-green-500" id="rating">
                   {stars.map((__, index) => (
@@ -120,7 +120,7 @@ const Testimonials: React.FC = () => {
               </footer>
             </blockquote>
 
-            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8">
+            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8 rounded-lg">
               <div>
                 <div className="flex gap-0.5 text-green-500" id="rating">
                   {stars.map((__, index) => (

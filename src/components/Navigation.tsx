@@ -1,7 +1,19 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../contexts/CartContext";
+
 const Navigation: React.FC = () => {
+  // Obtém os itens do carrinho do contexto
+  const { cartItems } = useCart();
+
+  // Calcula o total de itens adicionados
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
-    <header className="bg-white">
+    <header className="bg-white sticky top-0 w-full z-50 dark:bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
@@ -29,7 +41,7 @@ const Navigation: React.FC = () => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-gray-300 dark:hover:text-gray-400"
                     to="/reservation"
                   >
                     Reservas
@@ -38,7 +50,7 @@ const Navigation: React.FC = () => {
 
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-gray-300 dark:hover:text-gray-400"
                     to="/contact"
                   >
                     Contato
@@ -47,7 +59,7 @@ const Navigation: React.FC = () => {
 
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-gray-300 dark:hover:text-gray-400"
                     to="/testimonials"
                   >
                     Depoimentos
@@ -55,7 +67,7 @@ const Navigation: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-gray-300 dark:hover:text-gray-400"
                     to="/products"
                   >
                     Produtos
@@ -72,6 +84,11 @@ const Navigation: React.FC = () => {
                 to="/cart"
               >
                 Ver carrinho
+                {totalItems > 0 && (
+                  <span className="ml-2 inline-flex items-center justify-center rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
+                    {totalItems}
+                  </span>
+                )}
               </Link>
             </div>
 
@@ -79,7 +96,7 @@ const Navigation: React.FC = () => {
               <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-5"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -99,4 +116,5 @@ const Navigation: React.FC = () => {
     </header>
   );
 };
+
 export default Navigation;

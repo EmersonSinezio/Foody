@@ -6,15 +6,20 @@ import Cart from "./pages/Cart";
 import Testimonials from "./pages/Testimonials";
 import Reservation from "./pages/Reservation";
 import Contact from "./pages/Contact";
-/* Futura atualização
- TODO: 
-  1. Criar um componente para o footer
-  2. Criar no Header um botão para modo dark
-  3. Arrumar a responsividade para mobiles
-  4. Arrumar funcionalidades para carrinho
- */
+import { CartProvider } from "./contexts/CartContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+
+/*
+TODO:
+  Mudanças para fazer na aplicação
+  1) Criar um contexto para o tema dark
+  2) Ajustar Responsividade para telas menores
+*/
+
 const App: React.FC = () => {
   return (
+    <ThemeProvider>
+    <CartProvider>
     <Router>
       <Navigation />
       <Routes>
@@ -26,6 +31,8 @@ const App: React.FC = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
+    </CartProvider>
+    </ThemeProvider>
   );
 };
 
