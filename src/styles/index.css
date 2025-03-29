@@ -17,3 +17,8 @@
   transform: scale(1.2);
   /* Aumenta o tamanho da estrela ativa */
 }
+
+.bg_image img {
+  width: 100%;
+  height: 100%;
+}
