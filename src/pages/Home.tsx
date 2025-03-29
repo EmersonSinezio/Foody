@@ -5,18 +5,18 @@ const Home = () => {
     <div className="flex items-center justify-center w-full h-[89vh] bg-slate-50 dark:bg-gray-900">
       <div className="w-1/2 h-full flex items-center justify-center flex-col">
         {/* div do texto */}
-        <h1 className="text-3xl w-full md:text-4xl md:w-2/3 text-justify dark:text-white">
+        <h1 className="text-3xl w-screen px-16 md:px-0 md:text-4xl md:w-2/3 md:text-justify dark:text-white">
           Escolha a sua <br />
           comida <span className="text-yellow-600">favorita</span>
         </h1>
-        <p className="w-full md:w-2/3 my-6 text-sm md:text-base md:text-justify dark:text-white ">
+        <p className="w-screen px-16 md:px-0 md:w-2/3 my-6 text-sm md:text-base md:text-justify dark:text-white ">
           Descubra uma experiência gastronômica única com pratos preparados com
           ingredientes frescos e muito sabor. Aqui, você encontra opções que
           agradam a todos os paladares, do tradicional ao inovador.
         </p>
 
         {/* div dos botoes */}
-        <div className="w-full justify-center md:w-2/3 flex align-middle gap-2">
+        <div className="w-screen justify-center md:w-2/3 flex align-middle gap-2">
           <Link
             to={"/contact"}
             className="group relative inline-flex items-center overflow-hidden rounded-sm border border-current px-8 py-3 text-yellow-600 focus:ring-3 focus:outline-hidden border-[#FF6E4A]"

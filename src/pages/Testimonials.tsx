@@ -29,25 +29,24 @@ const Testimonials: React.FC = () => {
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar
   }, [stars.length]);
   return (
-    <div className="dark:bg-gray-900 w-full h-[90vh] flex items-center justify-center">
+    <div className="dark:bg-gray-900 md:max-w-full md:max-h-[89vh] lg:overflow-hidden flex items-center justify-center">
       <section className="bg-gray-50 dark:bg-gray-600">
         <div className="mx-auto sm:px-6 lg:px-8 lg:py-8">
           <div className="md:flex md:items-end md:justify-between">
-            <div className="max-w-full ml-8">
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <div className="max-w-full ml-8 mt-8">
+              <h2 className="text-xl font-bold tracking-tight text-gray-900 md:text-2xl">
                 Avaliações de quem já experimentou
               </h2>
 
-              <p className="mt-6 max-w-lg leading-relaxed text-gray-700">
+              <p className="mt-2 max-w-lg leading-relaxed text-gray-700 text-sm">
                 Descubra o que nossos clientes têm a dizer sobre as delícias do
-                nosso cardápio. Cada prato é preparado com cuidado e paixão para
-                oferecer uma experiência gastronômica única e inesquecível.
+                nosso cardápio.
               </p>
             </div>
 
             <a
               href="#"
-              className="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full border border-yellow-600 px-5 py-3 text-yellow-600 transition hover:bg-yellow-600 hover:text-white md:mt-0"
+              className="mt-2 mx-6 inline-flex shrink-0 items-center gap-2 rounded-full border border-yellow-600 px-5 py-3 text-yellow-600 transition hover:bg-yellow-600 hover:text-white md:mt-0 "
             >
               <span className="font-medium"> Ler todas as avaliações </span>
 
@@ -68,8 +67,8 @@ const Testimonials: React.FC = () => {
             </a>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 ">
-            <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-lg sm:p-8 rounded-lg">
+          <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3 ">
+            <blockquote className="flex h-full flex-col justify-between bg-white p-4 shadow-lg sm:p-6 rounded-lg">
               <div>
                 {/* Icones de estrelas */}
                 <div className="flex gap-0.5 text-green-500" id="rating">
@@ -78,11 +77,11 @@ const Testimonials: React.FC = () => {
                   ))}
                 </div>
                 <div className="mt-4">
-                  <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
+                  <p className="text-xl font-bold text-yellow-600 sm:text-2xl">
                     Comida maravilhosa!
                   </p>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 lg:text-sm sm:text-xs">
                     Experiência incrível! Os pratos estavam deliciosos e a
                     apresentação foi impecável. O atendimento foi atencioso e
                     certamente voltarei em breve!
@@ -90,7 +89,7 @@ const Testimonials: React.FC = () => {
                 </div>
               </div>
 
-              <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+              <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-4">
                 &mdash; Ana Clara
               </footer>
             </blockquote>
@@ -104,11 +103,11 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 <div className="mt-4">
-                  <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
+                  <p className="text-xl font-bold text-yellow-600 sm:text-2xl">
                     Melhor restaurante da região!
                   </p>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 lg:text-sm sm:text-xs">
                     A variedade no cardápio é incrível e cada prato tem um sabor
                     único. Ótima experiência gastronômica, recomendo a todos!
                   </p>
@@ -129,11 +128,11 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 <div className="mt-4">
-                  <p className="text-2xl font-bold text-yellow-600 sm:text-3xl">
+                  <p className="text-xl font-bold text-yellow-600 sm:text-2xl">
                     Ambiente acolhedor e comida deliciosa!
                   </p>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 lg:text-sm sm:text-xs">
                     O ambiente é super aconchegante e os pratos são incríveis.
                     Fiquei impressionada com a qualidade e o sabor. Com certeza
                     um lugar para retornar muitas vezes!

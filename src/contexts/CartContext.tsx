@@ -1,7 +1,6 @@
 // src/contexts/CartContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { Product } from "../data/products";
-
 interface CartItem {
   product: Product;
   quantity: number;
@@ -13,18 +12,29 @@ interface CartContextType {
   removeFromCart: (productName: string) => void;
   increaseQuantity: (productName: string) => void;
   decreaseQuantity: (productName: string) => void;
+  clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const CartProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
+  // Limpa o carrinho
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  // Adiciona um item ao carrinho
   const addToCart = (product: Product) => {
-    setCartItems(prevItems => {
-      const existingItem = prevItems.find(item => item.product.name === product.name);
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find(
+        (item) => item.product.name === product.name
+      );
       if (existingItem) {
-        return prevItems.map(item =>
+        return prevItems.map((item) =>
           item.product.name === product.name
             ? { ...item, quantity: item.quantity + 1 }
             : item
@@ -34,13 +44,17 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   };
 
+  // Remove um item do carrinho
   const removeFromCart = (productName: string) => {
-    setCartItems(prevItems => prevItems.filter(item => item.product.name !== productName));
+    setCartItems((prevItems) =>
+      prevItems.filter((item) => item.product.name !== productName)
+    );
   };
 
+  // Aumenta a quantidade de um item atraves do botão
   const increaseQuantity = (productName: string) => {
-    setCartItems(prevItems =>
-      prevItems.map(item =>
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
         item.product.name === productName
           ? { ...item, quantity: item.quantity + 1 }
           : item
@@ -48,18 +62,30 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     );
   };
 
+  // Diminui a quantidade de um item atraves do botão
   const decreaseQuantity = (productName: string) => {
-    setCartItems(prevItems =>
-      prevItems.map(item =>
-        item.product.name === productName && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
+    setCartItems((prevItems) =>
+      prevItems
+        .map((item) =>
+          item.product.name === productName
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
     );
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        increaseQuantity,
+        decreaseQuantity,
+        clearCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

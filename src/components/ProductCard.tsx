@@ -16,7 +16,7 @@ const ProductCard: React.FC = () => {
   return (
     <div className="h-[100vh] w-full dark:bg-gray-900">
       {/* Barra de pesquisa */}
-      <form onSubmit={handleSearch} className="max-w-md mx-auto  mt-[4vh]">
+      <form onSubmit={handleSearch} className="max-w-md px-4 mx-auto  mt-[4vh]">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -45,7 +45,7 @@ const ProductCard: React.FC = () => {
             type="search"
             id="default-search"
             className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-700 rounded-lg bg-transparent dark:text-white"
-            placeholder="Pesquisar sua comida favorita"
+            placeholder="Pesquisar "
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             required
@@ -60,8 +60,10 @@ const ProductCard: React.FC = () => {
       </form>
       {/* Produtos */}
       <div>
-        <h1 className="text-2xl font-bold my-8 mx-2 dark:text-white text-center">Principais produtos</h1>
-        <Cards products={filteredProducts}/>
+        <h1 className="text-2xl font-bold my-8 mx-2 dark:text-white text-center">
+          Principais produtos
+        </h1>
+        <Cards products={filteredProducts} />
       </div>
     </div>
   );
