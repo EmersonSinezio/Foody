@@ -7,7 +7,6 @@ import Testimonials from "./pages/Testimonials";
 import Reservation from "./pages/Reservation";
 import Contact from "./pages/Contact";
 import { CartProvider } from "./contexts/CartContext";
-import { ThemeProvider } from "./contexts/ThemeContext";
 
 /*
 TODO:
@@ -18,21 +17,19 @@ TODO:
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider>
     <CartProvider>
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/reservation" element={<Reservation />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </CartProvider>
-    </ThemeProvider>
   );
 };
 
