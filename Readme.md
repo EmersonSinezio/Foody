@@ -1,6 +1,6 @@
 # 🍔 Foody
 
-<img src="./readme/home_page.png" alt="Preview do Foody"/>
+<img src="./public/readme/home_page.png" alt="Preview do Foody"/>
 
 ---
 
@@ -55,11 +55,11 @@ npm run dev
 
 # 🖥️ Fluxo da Aplicação
 
-## <details> <summary>🏠 Página Inicial</summary> <img src="./readme/home_page.png" alt="Homepage"> </details>
+## <details> <summary>🏠 Página Inicial</summary> <img src="./public/readme/home_page.png" alt="Homepage"> </details>
 
-## <details> <summary>📝 Seção do Cardápio</summary> <img src="./readme/cardapio_page.png" alt="Cardápio"> </details>
+## <details> <summary>📝 Seção do Cardápio</summary> <img src="./public/readme/cardapio_page.png" alt="Cardápio"> </details>
 
-## <details> <summary>📅 Sistema de Reservas</summary> <img src="./readme/reserve_page.png" alt="Reservas"> </details>
+## <details> <summary>📅 Sistema de Reservas</summary> <img src="./public/readme/reserve_page.png" alt="Reservas"> </details>
 
 ## 🚧 Funcionalidades Futuras
 
