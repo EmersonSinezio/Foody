@@ -4,7 +4,7 @@
 
 ---
 
-[![Vercel Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](<[https://seu-link-deploy.com](https://foody-pearl-alpha.vercel.app/)>)
+[![Vercel Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](<[https://seu-link-deploy.com](https://foody-pearl-alpha.vercel.app/))
 
 Aplicativo moderno para gestão de restaurantes com sistema de pedidos e reservas, desenvolvido com tecnologias web atualizadas.
 
