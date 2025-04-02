@@ -73,4 +73,4 @@ npm run dev
 
 **Emerson Sinezio**  
 [![Email](https://img.shields.io/badge/Contato-Email-blue?style=flat-square)](https://mailto:emerson.sineziio@gmail.com/)  
-[![LinkedIn](https://img.shields.io/badge/Conectar-LinkedIn-blue?style=flat-square)](www.linkedin.com/in/emerson-sineziio)
+[![LinkedIn](https://img.shields.io/badge/Conectar-LinkedIn-blue?style=flat-square)](https://www.linkedin.com/in/emerson-sineziio)
