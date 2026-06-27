@@ -1,10 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foody</title>
+    <meta
+      name="description"
+      content="Foody — Sabor que conquista. Peça pratos artesanais com entrega rápida em até 30 minutos. Cardápio variado: pizzas, hambúrgueres, comida oriental, saladas e muito mais."
+    />
+    <meta name="theme-color" content="#eab308" />
+    <meta name="author" content="Foody" />
+    <meta property="og:title" content="Foody — Sabor que conquista" />
+    <meta
+      property="og:description"
+      content="Descubra uma experiência gastronômica única com pratos preparados com ingredientes frescos."
+    />
+    <meta property="og:type" content="website" />
+    <title>Foody — Sabor que conquista</title>
+    <!-- Anti-flash: aplica tema escuro antes do hydration para evitar FOUC -->
+    <script>
+      (function () {
+        try {
+          const saved = localStorage.getItem("@RestaurantApp:theme");
+          const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = saved || (prefers ? "dark" : "light");
+          if (theme === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

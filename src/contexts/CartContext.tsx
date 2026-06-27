@@ -1,6 +1,16 @@
-// src/contexts/CartContext.tsx
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+  useMemo,
+  useCallback,
+} from "react";
 import { Product } from "../data/products";
+
+const STORAGE_KEY = "@RestaurantApp:cart";
+
 interface CartItem {
   product: Product;
   quantity: number;
@@ -8,72 +18,109 @@ interface CartItem {
 
 interface CartContextType {
   cartItems: CartItem[];
-  addToCart: (product: Product) => void;
-  removeFromCart: (productName: string) => void;
-  increaseQuantity: (productName: string) => void;
-  decreaseQuantity: (productName: string) => void;
+  addToCart: (product: Product, options?: { silent?: boolean }) => void;
+  removeFromCart: (productId: string) => void;
+  increaseQuantity: (productId: string) => void;
+  decreaseQuantity: (productId: string) => void;
   clearCart: () => void;
+  cartTotal: number;
+  cartItemsCount: number;
+  // Drawer
+  isDrawerOpen: boolean;
+  openDrawer: () => void;
+  closeDrawer: () => void;
+  toggleDrawer: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+const loadCartFromStorage = (): CartItem[] => {
+  try {
+    const savedCart = localStorage.getItem(STORAGE_KEY);
+    if (savedCart) {
+      const parsed = JSON.parse(savedCart) as CartItem[];
+      if (Array.isArray(parsed)) return parsed;
+    }
+  } catch {
+    localStorage.removeItem(STORAGE_KEY);
+  }
+  return [];
+};
+
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(loadCartFromStorage);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  // Limpa o carrinho
-  const clearCart = () => {
-    setCartItems([]);
-  };
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
+  }, [cartItems]);
 
-  // Adiciona um item ao carrinho
-  const addToCart = (product: Product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find(
-        (item) => item.product.name === product.name
-      );
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.product.name === product.name
+  const cartTotal = useMemo(
+    () =>
+      cartItems.reduce(
+        (total, item) => total + item.product.price * item.quantity,
+        0
+      ),
+    [cartItems]
+  );
+
+  const cartItemsCount = useMemo(
+    () => cartItems.reduce((total, item) => total + item.quantity, 0),
+    [cartItems]
+  );
+
+  const openDrawer = useCallback(() => setDrawerOpen(true), []);
+  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
+  const toggleDrawer = useCallback(() => setDrawerOpen((p) => !p), []);
+
+  const addToCart = (product: Product, options?: { silent?: boolean }) => {
+    setCartItems((prev) => {
+      const existing = prev.find((item) => item.product.id === product.id);
+      if (existing) {
+        return prev.map((item) =>
+          item.product.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
-      return [...prevItems, { product, quantity: 1 }];
+      return [...prev, { product, quantity: 1 }];
     });
+    if (!options?.silent) {
+      openDrawer();
+    }
   };
 
-  // Remove um item do carrinho
-  const removeFromCart = (productName: string) => {
-    setCartItems((prevItems) =>
-      prevItems.filter((item) => item.product.name !== productName)
+  const removeFromCart = (productId: string) => {
+    setCartItems((prev) =>
+      prev.filter((item) => item.product.id !== productId)
     );
   };
 
-  // Aumenta a quantidade de um item atraves do botão
-  const increaseQuantity = (productName: string) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.product.name === productName
+  const increaseQuantity = (productId: string) => {
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.product.id === productId
           ? { ...item, quantity: item.quantity + 1 }
           : item
       )
     );
   };
 
-  // Diminui a quantidade de um item atraves do botão
-  const decreaseQuantity = (productName: string) => {
-    setCartItems((prevItems) =>
-      prevItems
+  const decreaseQuantity = (productId: string) => {
+    setCartItems((prev) =>
+      prev
         .map((item) =>
-          item.product.name === productName
+          item.product.id === productId
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
         .filter((item) => item.quantity > 0)
     );
   };
+
+  const clearCart = () => setCartItems([]);
 
   return (
     <CartContext.Provider
@@ -84,6 +131,12 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         increaseQuantity,
         decreaseQuantity,
         clearCart,
+        cartTotal,
+        cartItemsCount,
+        isDrawerOpen,
+        openDrawer,
+        closeDrawer,
+        toggleDrawer,
       }}
     >
       {children}
